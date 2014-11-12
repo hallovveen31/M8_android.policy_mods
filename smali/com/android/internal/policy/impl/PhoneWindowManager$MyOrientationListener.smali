@@ -21,18 +21,11 @@
 # direct methods
 .method constructor <init>(Lcom/android/internal/policy/impl/PhoneWindowManager;Landroid/content/Context;Landroid/os/Handler;)V
     .locals 0
-    .parameter
-    .parameter "context"
-    .parameter "handler"
 
-    .prologue
-    .line 921
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$MyOrientationListener;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
-    .line 922
     invoke-direct {p0, p2, p3}, Lcom/android/internal/policy/impl/WindowOrientationListener;-><init>(Landroid/content/Context;Landroid/os/Handler;)V
 
-    .line 923
     return-void
 .end method
 
@@ -40,10 +33,7 @@
 # virtual methods
 .method public onProposedRotationChanged(I)V
     .locals 3
-    .parameter "rotation"
 
-    .prologue
-    .line 928
     sget-boolean v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->DEBUG_HTC:Z
 
     if-eqz v0, :cond_0
@@ -70,7 +60,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 932
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$MyOrientationListener;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -78,24 +67,20 @@
 
     if-eqz v0, :cond_2
 
-    .line 933
     sget-boolean v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->DEBUG_HTC:Z
 
     if-eqz v0, :cond_1
 
-    .line 934
     const-string v0, "WindowManager"
 
     const-string v1, "skip orientation because shutting down now"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 939
     :cond_1
     :goto_0
     return-void
 
-    .line 938
     :cond_2
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$MyOrientationListener;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 

@@ -21,16 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/internal/policy/impl/GlobalActions;IIIIIZ)V
     .locals 7
-    .parameter
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
-    .parameter "x3"
-    .parameter "x4"
-    .parameter "x5"
 
-    .prologue
-    .line 356
     iput-object p1, p0, Lcom/android/internal/policy/impl/GlobalActions$1;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     move-object v0, p0
@@ -56,10 +47,7 @@
 # virtual methods
 .method protected changeStateFromPress(Z)V
     .locals 3
-    .parameter "buttonOn"
 
-    .prologue
-    .line 376
     sget-boolean v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEBUG_flag:Z
 
     if-eqz v0, :cond_0
@@ -86,7 +74,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 377
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions$1;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
@@ -97,12 +84,10 @@
 
     if-nez v0, :cond_2
 
-    .line 394
     :cond_1
     :goto_0
     return-void
 
-    .line 380
     :cond_2
     const-string v0, "ril.cdma.inecmmode"
 
@@ -116,7 +101,6 @@
 
     if-nez v0, :cond_1
 
-    .line 383
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions$1;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     #getter for: Lcom/android/internal/policy/impl/GlobalActions;->mSkipTransition:Z
@@ -143,7 +127,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 387
     :cond_3
     if-eqz p1, :cond_4
 
@@ -152,7 +135,6 @@
     :goto_1
     iput-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions$1;->mState:Lcom/android/internal/policy/impl/GlobalActions$ToggleAction$State;
 
-    .line 391
     :goto_2
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions$1;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
@@ -161,7 +143,6 @@
     #setter for: Lcom/android/internal/policy/impl/GlobalActions;->mAirplaneState:Lcom/android/internal/policy/impl/GlobalActions$ToggleAction$State;
     invoke-static {v0, v1}, Lcom/android/internal/policy/impl/GlobalActions;->access$602(Lcom/android/internal/policy/impl/GlobalActions;Lcom/android/internal/policy/impl/GlobalActions$ToggleAction$State;)Lcom/android/internal/policy/impl/GlobalActions$ToggleAction$State;
 
-    .line 392
     sget-boolean v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEBUG_flag:Z
 
     if-eqz v0, :cond_1
@@ -209,13 +190,11 @@
 
     goto :goto_0
 
-    .line 387
     :cond_4
     sget-object v0, Lcom/android/internal/policy/impl/GlobalActions$ToggleAction$State;->Off:Lcom/android/internal/policy/impl/GlobalActions$ToggleAction$State;
 
     goto :goto_1
 
-    .line 389
     :cond_5
     if-eqz p1, :cond_6
 
@@ -234,10 +213,7 @@
 
 .method onToggle(Z)V
     .locals 4
-    .parameter "on"
 
-    .prologue
-    .line 360
     sget-boolean v1, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEBUG_flag:Z
 
     if-eqz v1, :cond_0
@@ -264,7 +240,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 361
     :cond_0
     iget-object v1, p0, Lcom/android/internal/policy/impl/GlobalActions$1;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
@@ -287,7 +262,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 363
     iget-object v1, p0, Lcom/android/internal/policy/impl/GlobalActions$1;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     const/4 v2, 0x1
@@ -295,7 +269,6 @@
     #setter for: Lcom/android/internal/policy/impl/GlobalActions;->mIsWaitingForEcmExit:Z
     invoke-static {v1, v2}, Lcom/android/internal/policy/impl/GlobalActions;->access$102(Lcom/android/internal/policy/impl/GlobalActions;Z)Z
 
-    .line 365
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.ACTION_SHOW_NOTICE_ECM_BLOCK_OTHERS"
@@ -304,13 +277,10 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 367
-    .local v0, ecmDialogIntent:Landroid/content/Intent;
     const/high16 v1, 0x1000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 368
     iget-object v1, p0, Lcom/android/internal/policy/impl/GlobalActions$1;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     #getter for: Lcom/android/internal/policy/impl/GlobalActions;->mContext:Landroid/content/Context;
@@ -320,12 +290,9 @@
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    .line 372
-    .end local v0           #ecmDialogIntent:Landroid/content/Intent;
     :goto_0
     return-void
 
-    .line 370
     :cond_1
     iget-object v1, p0, Lcom/android/internal/policy/impl/GlobalActions$1;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
@@ -338,8 +305,6 @@
 .method public showBeforeProvisioning()Z
     .locals 1
 
-    .prologue
-    .line 401
     const/4 v0, 0x0
 
     return v0
@@ -348,8 +313,6 @@
 .method public showDuringKeyguard()Z
     .locals 1
 
-    .prologue
-    .line 397
     const/4 v0, 0x1
 
     return v0

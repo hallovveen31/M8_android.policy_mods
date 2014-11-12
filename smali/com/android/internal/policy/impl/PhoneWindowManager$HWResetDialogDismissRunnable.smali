@@ -28,28 +28,19 @@
 # direct methods
 .method constructor <init>(Lcom/android/internal/policy/impl/PhoneWindowManager;Lcom/htc/app/HtcProgressDialog;Ljava/lang/String;)V
     .locals 1
-    .parameter
-    .parameter "dlg"
-    .parameter "dlgName"
 
-    .prologue
-    .line 3733
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HWResetDialogDismissRunnable;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3730
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HWResetDialogDismissRunnable;->dlg:Lcom/htc/app/HtcProgressDialog;
 
-    .line 3734
     iput-object p2, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HWResetDialogDismissRunnable;->dlg:Lcom/htc/app/HtcProgressDialog;
 
-    .line 3735
     iput-object p3, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HWResetDialogDismissRunnable;->dlgName:Ljava/lang/String;
 
-    .line 3736
     return-void
 .end method
 
@@ -58,8 +49,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 3739
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HWResetDialogDismissRunnable;->dlg:Lcom/htc/app/HtcProgressDialog;
 
     if-eqz v0, :cond_0
@@ -72,17 +61,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 3741
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HWResetDialogDismissRunnable;->dlg:Lcom/htc/app/HtcProgressDialog;
 
     invoke-virtual {v0}, Lcom/htc/app/HtcProgressDialog;->dismiss()V
 
-    .line 3742
     sget-boolean v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->DEBUG_HTC:Z
 
     if-eqz v0, :cond_0
 
-    .line 3743
     const-string v0, "InputDispatcher"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -107,7 +93,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3745
     :cond_0
     return-void
 .end method

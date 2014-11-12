@@ -39,18 +39,11 @@
 # direct methods
 .method public constructor <init>(Lcom/android/internal/policy/impl/ImmersiveModeConfirmation;Landroid/content/Context;Ljava/lang/Runnable;)V
     .locals 2
-    .parameter
-    .parameter "context"
-    .parameter "confirm"
 
-    .prologue
-    .line 229
     iput-object p1, p0, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView;->this$0:Lcom/android/internal/policy/impl/ImmersiveModeConfirmation;
 
-    .line 230
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 207
     new-instance v0, Landroid/graphics/drawable/ColorDrawable;
 
     const/4 v1, 0x0
@@ -59,43 +52,34 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView;->mColor:Landroid/graphics/drawable/ColorDrawable;
 
-    .line 211
     new-instance v0, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView$1;
 
     invoke-direct {v0, p0}, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView$1;-><init>(Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView;)V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView;->mUpdateLayoutRunnable:Ljava/lang/Runnable;
 
-    .line 220
     new-instance v0, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView$2;
 
     invoke-direct {v0, p0}, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView$2;-><init>(Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView;)V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 231
     iput-object p3, p0, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView;->mConfirm:Ljava/lang/Runnable;
 
-    .line 232
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView;->setClickable(Z)V
 
-    .line 233
     iget-object v0, p0, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView;->mColor:Landroid/graphics/drawable/ColorDrawable;
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 234
     return-void
 .end method
 
 .method static synthetic access$100(Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView;)Landroid/view/ViewGroup;
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 202
     iget-object v0, p0, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView;->mClingLayout:Landroid/view/ViewGroup;
 
     return-object v0
@@ -103,10 +87,7 @@
 
 .method static synthetic access$200(Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView;)Ljava/lang/Runnable;
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 202
     iget-object v0, p0, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView;->mUpdateLayoutRunnable:Ljava/lang/Runnable;
 
     return-object v0
@@ -114,10 +95,7 @@
 
 .method static synthetic access$400(Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView;)Ljava/lang/Runnable;
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 202
     iget-object v0, p0, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView;->mConfirm:Ljava/lang/Runnable;
 
     return-object v0
@@ -125,10 +103,7 @@
 
 .method static synthetic access$500(Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView;)Landroid/graphics/drawable/ColorDrawable;
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 202
     iget-object v0, p0, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView;->mColor:Landroid/graphics/drawable/ColorDrawable;
 
     return-object v0
@@ -139,7 +114,6 @@
 .method public onAttachedToWindow()V
     .locals 12
 
-    .prologue
     const/4 v11, 0x0
 
     const/high16 v10, -0x8000
@@ -150,16 +124,12 @@
 
     const/4 v7, 0x0
 
-    .line 238
     invoke-super {p0}, Landroid/widget/FrameLayout;->onAttachedToWindow()V
 
-    .line 240
     new-instance v2, Landroid/util/DisplayMetrics;
 
     invoke-direct {v2}, Landroid/util/DisplayMetrics;-><init>()V
 
-    .line 241
-    .local v2, metrics:Landroid/util/DisplayMetrics;
     iget-object v4, p0, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView;->this$0:Lcom/android/internal/policy/impl/ImmersiveModeConfirmation;
 
     #getter for: Lcom/android/internal/policy/impl/ImmersiveModeConfirmation;->mWindowManager:Landroid/view/WindowManager;
@@ -173,11 +143,8 @@
 
     invoke-virtual {v4, v2}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 242
     iget v1, v2, Landroid/util/DisplayMetrics;->density:F
 
-    .line 245
-    .local v1, density:F
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView;->getContext()Landroid/content/Context;
 
     move-result-object v4
@@ -194,7 +161,6 @@
 
     iput-object v4, p0, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView;->mClingLayout:Landroid/view/ViewGroup;
 
-    .line 248
     iget-object v4, p0, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView;->mClingLayout:Landroid/view/ViewGroup;
 
     const v5, 0x10202b1
@@ -205,15 +171,12 @@
 
     check-cast v3, Landroid/widget/Button;
 
-    .line 249
-    .local v3, ok:Landroid/widget/Button;
     new-instance v4, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView$3;
 
     invoke-direct {v4, p0}, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView$3;-><init>(Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView;)V
 
     invoke-virtual {v3, v4}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 255
     iget-object v4, p0, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView;->mClingLayout:Landroid/view/ViewGroup;
 
     iget-object v5, p0, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView;->this$0:Lcom/android/internal/policy/impl/ImmersiveModeConfirmation;
@@ -224,14 +187,12 @@
 
     invoke-virtual {p0, v4, v5}, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 257
     invoke-static {}, Landroid/app/ActivityManager;->isHighEndGfx()Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 258
     iget-object v4, p0, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView;->mClingLayout:Landroid/view/ViewGroup;
 
     const v5, 0x1020046
@@ -240,16 +201,12 @@
 
     move-result-object v0
 
-    .line 259
-    .local v0, bubble:Landroid/view/View;
     invoke-virtual {v0, v7}, Landroid/view/View;->setAlpha(F)V
 
-    .line 260
     mul-float v4, v8, v1
 
     invoke-virtual {v0, v4}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 261
     invoke-virtual {v0}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v4
@@ -278,15 +235,12 @@
 
     invoke-virtual {v4}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 268
     invoke-virtual {v3, v7}, Landroid/widget/Button;->setAlpha(F)V
 
-    .line 269
     mul-float v4, v8, v1
 
     invoke-virtual {v3, v4}, Landroid/widget/Button;->setTranslationY(F)V
 
-    .line 270
     invoke-virtual {v3}, Landroid/widget/Button;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v4
@@ -321,7 +275,6 @@
 
     invoke-virtual {v4}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 277
     new-instance v4, Landroid/animation/ArgbEvaluator;
 
     invoke-direct {v4}, Landroid/animation/ArgbEvaluator;-><init>()V
@@ -350,7 +303,6 @@
 
     iput-object v4, p0, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView;->mColorAnim:Landroid/animation/ValueAnimator;
 
-    .line 278
     iget-object v4, p0, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView;->mColorAnim:Landroid/animation/ValueAnimator;
 
     new-instance v5, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView$4;
@@ -359,20 +311,16 @@
 
     invoke-virtual {v4, v5}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 285
     iget-object v4, p0, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView;->mColorAnim:Landroid/animation/ValueAnimator;
 
     const-wide/16 v5, 0x3e8
 
     invoke-virtual {v4, v5, v6}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 286
     iget-object v4, p0, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView;->mColorAnim:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v4}, Landroid/animation/ValueAnimator;->start()V
 
-    .line 291
-    .end local v0           #bubble:Landroid/view/View;
     :goto_0
     iget-object v4, p0, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView;->mContext:Landroid/content/Context;
 
@@ -386,10 +334,8 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 292
     return-void
 
-    .line 288
     :cond_0
     iget-object v4, p0, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView;->mColor:Landroid/graphics/drawable/ColorDrawable;
 
@@ -401,31 +347,24 @@
 .method public onDetachedFromWindow()V
     .locals 2
 
-    .prologue
-    .line 296
     iget-object v0, p0, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$ClingWindowView;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 297
     return-void
 .end method
 
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 2
-    .parameter "motion"
 
-    .prologue
-    .line 301
     const-string v0, "ImmersiveModeConfirmation"
 
     const-string v1, "ClingWindowView.onTouchEvent"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 302
     const/4 v0, 0x1
 
     return v0

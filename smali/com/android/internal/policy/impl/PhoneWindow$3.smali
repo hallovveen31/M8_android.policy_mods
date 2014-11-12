@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/internal/policy/impl/PhoneWindow;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 3545
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindow$3;->this$0:Lcom/android/internal/policy/impl/PhoneWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,8 +37,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 3548
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindow$3;->this$0:Lcom/android/internal/policy/impl/PhoneWindow;
 
@@ -51,24 +46,20 @@
 
     if-nez v1, :cond_1
 
-    .line 3549
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindow$3;->this$0:Lcom/android/internal/policy/impl/PhoneWindow;
 
     #calls: Lcom/android/internal/policy/impl/PhoneWindow;->showNavigationBarTips()V
     invoke-static {v1}, Lcom/android/internal/policy/impl/PhoneWindow;->access$2000(Lcom/android/internal/policy/impl/PhoneWindow;)V
 
-    .line 3559
     :cond_0
     :goto_0
     return-void
 
-    .line 3550
     :cond_1
     sget-boolean v1, Lcom/htc/view/NavigationBarConfiguration;->DEBUG_NAV_BAR:Z
 
     if-eqz v1, :cond_0
 
-    .line 3551
     const-string v1, "PhoneWindow"
 
     const-string v2, "showNavigationBarTips, ignore since window is destroyed"
@@ -79,12 +70,9 @@
 
     goto :goto_0
 
-    .line 3553
     :catch_0
     move-exception v0
 
-    .line 3554
-    .local v0, ex:Ljava/lang/Exception;
     sget-boolean v1, Lcom/htc/view/NavigationBarConfiguration;->DEBUG_NAV_BAR:Z
 
     if-eqz v1, :cond_2
@@ -95,7 +83,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 3556
     :cond_2
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindow$3;->this$0:Lcom/android/internal/policy/impl/PhoneWindow;
 
@@ -103,7 +90,6 @@
 
     iput-object v2, v1, Lcom/android/internal/policy/impl/PhoneWindow;->mCheckBox:Lcom/htc/widget/HtcCheckBox;
 
-    .line 3557
     const/4 v1, 0x1
 
     sput-boolean v1, Lcom/android/internal/policy/impl/PhoneWindow;->mFirstCheck:Z

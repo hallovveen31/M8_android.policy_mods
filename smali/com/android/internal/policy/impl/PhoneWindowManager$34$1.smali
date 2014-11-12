@@ -25,14 +25,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/internal/policy/impl/PhoneWindowManager$34;JJII)V
     .locals 0
-    .parameter
-    .parameter "x0"
-    .parameter "x1"
-    .parameter
-    .parameter
 
-    .prologue
-    .line 8273
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$34$1;->this$1:Lcom/android/internal/policy/impl/PhoneWindowManager$34;
 
     iput p6, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$34$1;->val$hwResetText_singular_55:I
@@ -49,8 +42,6 @@
 .method public onFinish()V
     .locals 3
 
-    .prologue
-    .line 8290
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$34$1;->this$1:Lcom/android/internal/policy/impl/PhoneWindowManager$34;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/PhoneWindowManager$34;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
@@ -63,7 +54,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 8291
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$34$1;->this$1:Lcom/android/internal/policy/impl/PhoneWindowManager$34;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/PhoneWindowManager$34;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
@@ -88,24 +78,19 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/app/HtcProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 8293
     :cond_0
     return-void
 .end method
 
 .method public onTick(J)V
     .locals 7
-    .parameter "msUntilFinished"
 
-    .prologue
     const-wide/16 v5, 0x3e8
 
-    .line 8275
     sget-boolean v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->DEBUG_HTC:Z
 
     if-eqz v0, :cond_0
 
-    .line 8276
     const-string v0, "InputDispatcher"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -136,7 +121,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8278
     :cond_0
     div-long v0, p1, v5
 
@@ -146,7 +130,6 @@
 
     if-nez v0, :cond_2
 
-    .line 8279
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$34$1;->this$1:Lcom/android/internal/policy/impl/PhoneWindowManager$34;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/PhoneWindowManager$34;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
@@ -159,7 +142,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 8280
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$34$1;->this$1:Lcom/android/internal/policy/impl/PhoneWindowManager$34;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/PhoneWindowManager$34;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
@@ -184,12 +166,10 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/app/HtcProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 8287
     :cond_1
     :goto_0
     return-void
 
-    .line 8283
     :cond_2
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$34$1;->this$1:Lcom/android/internal/policy/impl/PhoneWindowManager$34;
 
@@ -203,7 +183,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 8284
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$34$1;->this$1:Lcom/android/internal/policy/impl/PhoneWindowManager$34;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/PhoneWindowManager$34;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
