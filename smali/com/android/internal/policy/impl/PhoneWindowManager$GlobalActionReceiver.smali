@@ -60,7 +60,7 @@
 
     if-eqz v1, :cond_0
 
-    const-string v2, "reboot"
+    const-string v2, "Reboot"
 
     invoke-virtual {v1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 

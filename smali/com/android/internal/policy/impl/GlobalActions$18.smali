@@ -41,7 +41,7 @@
 
     move-result-object v0
 
-    const-string v1, "bootloader"
+    const-string v1, "Bootloader"
 
     const/4 v2, 0x0
 

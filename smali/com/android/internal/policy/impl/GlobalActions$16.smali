@@ -36,7 +36,7 @@
 
     const-string v0, "ADVANCED POWER MENU"
 
-    const-string v1, "Safe mode"
+    const-string v1, "Safe Mode"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
